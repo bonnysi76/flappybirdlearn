@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Created by Bonny Sithole</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Created by Bonny Sithole</h1>
-    </header>
-    <div class="game-container">
-      <canvas id="myCanvas"></canvas>
-      <div class="controls">
-        <button id="pauseButton">Pause</button>
-        <button id="darkModeToggle">Toggle Dark Mode</button>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flappy Bird - Created by Bonny Sithole</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="bird-icon.png">
+</head>
+<body>
+  <div id="container">
+    <div id="overlay">
+      <h1>Flappy Bird</h1>
+      <p>Created by Bonny Sithole</p>
+      <p>High Score: <span id="high-score">0</span></p>
+      <button id="start-btn">Start Game</button>
+      <button id="theme-toggle">Toggle Theme</button>
     </div>
-    <script src="script.js"></script>
-  </body>
+    <canvas id="gameCanvas"></canvas>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>

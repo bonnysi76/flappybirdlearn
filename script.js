@@ -14,9 +14,6 @@ birdImage.src = "bird.png"; // Replace with your bird sprite
 const pipeImage = new Image();
 pipeImage.src = "pipe.png"; // Replace with your pipe sprite
 
-const backgroundDay = "day-background.png"; // Replace with a day theme image
-const backgroundNight = "night-background.png"; // Replace with a night theme image
-
 const flapSound = new Audio("flap.mp3");
 const crashSound = new Audio("crash.mp3");
 const scoreSound = new Audio("score.mp3");
@@ -83,8 +80,8 @@ function spawnPipe() {
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Background (toggle theme)
-  ctx.fillStyle = "lightblue";
+  // Background
+  ctx.fillStyle = level % 2 === 0 ? "lightblue" : "darkblue"; // Alternate backgrounds for levels
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   // Bird
@@ -133,7 +130,7 @@ function gameLoop() {
     stopGame();
   }
 
-  // Display score
+  // Display score and level
   ctx.fillStyle = "black";
   ctx.font = "20px Arial";
   ctx.fillText(`Score: ${score}`, 10, 20);

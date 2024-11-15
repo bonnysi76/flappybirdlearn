@@ -1,69 +1,67 @@
+/* General styles */
 body {
-  font-family: "Pacifico", cursive;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  transition: background-color 0.3s, color 0.3s;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #87ceeb; /* Default theme: Day */
+  transition: background-color 0.5s ease;
 }
 
-header {
-  margin-bottom: 10px;
-  text-align: center;
-  color: #333;
-}
-
-.game-container {
+#container {
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 canvas {
-  border: 2px solid #333;
-  max-width: 95%;
-  height: auto;
-  background: url('http://s2js.com/img/etc/flappyback.png');
-  background-size: cover;
-  transition: transform 0.2s ease-in-out;
+  border: 2px solid black;
+  display: block;
 }
 
-canvas:hover {
-  transform: scale(1.03);
-}
-
-.controls {
-  margin-top: 10px;
+#overlay {
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 button {
   padding: 10px 20px;
-  font-size: 16px;
   border: none;
+  background-color: #4CAF50;
+  color: white;
   border-radius: 5px;
-  margin: 5px;
   cursor: pointer;
-  background-color: #333;
-  color: #fff;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #444;
+  background-color: #45a049;
 }
 
+/* Dark mode */
 body.dark-mode {
-  background-color: #121212;
-  color: #ddd;
+  background-color: #2c3e50;
 }
 
 body.dark-mode button {
-  background-color: #ddd;
-  color: #333;
+  background-color: #3498db;
 }
 
-body.dark-mode canvas {
-  border-color: #ddd;
+body.dark-mode button:hover {
+  background-color: #2980b9;
 }
